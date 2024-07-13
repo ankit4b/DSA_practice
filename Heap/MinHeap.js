@@ -106,6 +106,11 @@ class MinHeap {
             console.log(num);
         }
     }
+
+    // Get minumum value
+    peak(){
+        return this.heap[0];
+    }
 }
 
 // Usage example
@@ -115,23 +120,26 @@ priorityQueue.insert(5);
 priorityQueue.insert(20);
 priorityQueue.insert(3);
 
+console.log("Peak : ",priorityQueue.peak());
 console.log("Print -----------------------------");
 priorityQueue.printHeap();
 
 priorityQueue.removeMin();
-
+console.log("Peak : ",priorityQueue.peak());
 console.log("Print -----------------------------");
 priorityQueue.printHeap();
 
 
 /*
 OUTPUT:
+Peak :  3
 Print -----------------------------
 3
 5
 20
 10
 Print -----------------------------
+Peak :  5
 5
 10
 20
